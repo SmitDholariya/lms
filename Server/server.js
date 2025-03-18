@@ -1,14 +1,14 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv/config')
-const connectDb = require('./database/db');
+const connectDb = require('./database/db.js');
 const clerkWebhooks = require('./controlleres/webhooks')
 
 //initialize express
 const app = express();
 
 //middleware 
-app.use(cors());
+app.use(express.json());
 
 //connecting to db
 connectDb();
